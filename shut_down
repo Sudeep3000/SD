@@ -1,0 +1,20 @@
+import os
+import time
+
+def shut_down():
+    try:
+        seconds= int(input("Enter the time:" ))
+    except:
+        print("Enter an proper number ")
+        shut_down()
+    time.sleep(seconds)
+
+    check = input("do u want to shutdown ur computer? (yes/no):")
+
+    if  check == "no":
+        exit()
+    else:
+        os.system("shutdown /s /t 5")
+        
+
+shut_down()
